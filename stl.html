@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'left left middle middle right right' 
+    'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+} 
+
+.left,
+.middle,
+.right {
+  padding: 10px;
+  height: 100% /* Should be removed. Only for demonstration */
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+}
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>CSS Template using Grid</h2>
+<p>In this example, we have created a header, three equal columns and a footer. On smaller screens, the columns will stack on top of each other.</p>
+<p>Resize the browser window to see the responsive effect.</p>
+<p><strong>Note:</strong> The Grid Layout Module is not supported in Internet Explorer or Edge 15 eand earlier versions.</p>
+
+<div class="grid-container">
+  <div class="header">
+    <header>
+      <div class="wrapper">
+          <nav>
+              <a href="/landing.html">Home</a>
+              <a href="/about.html">About</a>
+              <a href="/blog.html">Blog</a>
+          </nav>
+      </div>
+  </header>
+  </div>
+  
+  <div class="left" style="background-color:#aaa;">  <img src="jann.png"> </div>
+  <div class="middle" style="background-color:#bbb;"><h2>Janet's Bio</h2>  
+    <p>Hi my name is Anyijukire Janet, currently a student at AkiraChix. Janet was born in 2001, 
+        March 3rd in Kanungu District the South Western part of Uganda to Byaruhanga Frank and Niwamanya 
+        Ruth as their first daughter. </p> 
+        
+    <p>Janet went to Kihihi Progressive school for her primary school, Immaculate heart Girls school 
+        Nyakibale for her ordinary level and San Giovanni school Makiro for her Advanced level(high school).</p>
+    <p>She has been a leader serving in her former schools in different roles; <br> In Primary 
+        she was the chapel prefect from 2012-2013. <br> In Ordinary level she was the leader of Girl Guides.
+    She was rewarded with a certificate. <br> In advanced level she was the school speaker. She was
+     rewarded with a certificate of merit. <br>Currently she is the entertainment representative at AkiraChix.</p></div>  
+  <div class="right" style="background-color:#ccc;">Column</div>
+  
+  <div class="footer">
+  <p><footer>
+    <h4>Reach me</h4>
+    <ul>
+   <li><a href="https://www.facebook.com/anyijukire.janet.1">facebook</a></li>
+   <li><a href="https://www.linkedin.com/mynetwork/">linkedin-in</a></li>
+   <li><a href="https://twitter.com/AnyijukireJane1">twitter</a></li> 
+   <li><a href="https://github.com/">github</a></li>
+   </ul>          
+ </footer> </p>
+  </div>
+</div>
+
+</body>
+</html>
